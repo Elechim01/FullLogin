@@ -6,11 +6,26 @@
 //
 
 import SwiftUI
-
+import Firebase
 struct ContentView: View {
+    @AppStorage("log_Status")var log_Status = false
+    @State var skip = false
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if log_Status || skip{
+            NavigationView{
+                Button {
+                    withAnimation {
+                        log_Status = false
+                    }
+                    try! Auth.auth().signOut()
+                } label: {
+                    Text("Signout")
+                }
+                .navigationTitle("Home")
+            }
+        }else{
+            Login(skip: $skip)
+        }
     }
 }
 

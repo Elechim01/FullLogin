@@ -17,6 +17,12 @@
 		C44699B726EB58F700C14426 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C446998F26EB58F400C14426 /* ContentView.swift */; };
 		C44699B826EB58F700C14426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C446999026EB58F700C14426 /* Assets.xcassets */; };
 		C44699B926EB58F700C14426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C446999026EB58F700C14426 /* Assets.xcassets */; };
+		C44699CB26EB592D00C14426 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44699CA26EB592D00C14426 /* Login.swift */; };
+		C4469A0D26EB671F00C14426 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4469A0C26EB671F00C14426 /* CustomTextField.swift */; };
+		C4469A0F26EB688400C14426 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4469A0E26EB688400C14426 /* LoginViewModel.swift */; };
+		C4469A1226EB705D00C14426 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C4469A1126EB705D00C14426 /* FirebaseAuth */; };
+		C4469A1426EB710C00C14426 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4469A1326EB710C00C14426 /* GoogleService-Info.plist */; };
+		C4469A1526EB710C00C14426 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4469A1326EB710C00C14426 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,12 @@
 		C44699AC26EB58F700C14426 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44699B026EB58F700C14426 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		C44699B226EB58F700C14426 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		C44699CA26EB592D00C14426 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		C4469A0C26EB671F00C14426 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		C4469A0E26EB688400C14426 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C4469A1326EB710C00C14426 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4469A1626EB713100C14426 /* FullLogin--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FullLogin--iOS--Info.plist"; sourceTree = "<group>"; };
+		C4469A6626EBA7DB00C14426 /* FullLogin (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FullLogin (iOS).entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4469A1226EB705D00C14426 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +98,8 @@
 		C446998826EB58F400C14426 = {
 			isa = PBXGroup;
 			children = (
+				C4469A6626EBA7DB00C14426 /* FullLogin (iOS).entitlements */,
+				C4469A1626EB713100C14426 /* FullLogin--iOS--Info.plist */,
 				C446998D26EB58F400C14426 /* Shared */,
 				C44699A326EB58F700C14426 /* Tests iOS */,
 				C44699AF26EB58F700C14426 /* Tests macOS */,
@@ -95,7 +110,10 @@
 		C446998D26EB58F400C14426 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C44699C926EB591C00C14426 /* ViewModel */,
+				C44699C826EB590F00C14426 /* View */,
 				C446998E26EB58F400C14426 /* FullLoginApp.swift */,
+				C4469A1326EB710C00C14426 /* GoogleService-Info.plist */,
 				C446998F26EB58F400C14426 /* ContentView.swift */,
 				C446999026EB58F700C14426 /* Assets.xcassets */,
 			);
@@ -131,6 +149,23 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		C44699C826EB590F00C14426 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C44699CA26EB592D00C14426 /* Login.swift */,
+				C4469A0C26EB671F00C14426 /* CustomTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C44699C926EB591C00C14426 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C4469A0E26EB688400C14426 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +182,9 @@
 			dependencies = (
 			);
 			name = "FullLogin (iOS)";
+			packageProductDependencies = (
+				C4469A1126EB705D00C14426 /* FirebaseAuth */,
+			);
 			productName = "FullLogin (iOS)";
 			productReference = C446999526EB58F700C14426 /* FullLogin.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +277,9 @@
 				Base,
 			);
 			mainGroup = C446998826EB58F400C14426;
+			packageReferences = (
+				C4469A1026EB705D00C14426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C446999626EB58F700C14426 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -256,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4469A1426EB710C00C14426 /* GoogleService-Info.plist in Resources */,
 				C44699B826EB58F700C14426 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4469A1526EB710C00C14426 /* GoogleService-Info.plist in Resources */,
 				C44699B926EB58F700C14426 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +332,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4469A0D26EB671F00C14426 /* CustomTextField.swift in Sources */,
+				C44699CB26EB592D00C14426 /* Login.swift in Sources */,
 				C44699B626EB58F700C14426 /* ContentView.swift in Sources */,
+				C4469A0F26EB688400C14426 /* LoginViewModel.swift in Sources */,
 				C44699B426EB58F700C14426 /* FullLoginApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,11 +499,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FullLogin (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G7DSPSWXXC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FullLogin--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -483,11 +531,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FullLogin (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G7DSPSWXXC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FullLogin--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -717,6 +767,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4469A1026EB705D00C14426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4469A1126EB705D00C14426 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4469A1026EB705D00C14426 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C446998926EB58F400C14426 /* Project object */;
 }
